@@ -1,0 +1,71 @@
+var buyingGuide = {
+  "choiceSet": [
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+  ],
+  "choiceSet": [
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+  ],
+  "choiceSet": [
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+    {
+      "category": "JavaScript",
+      "tests": [
+        { "name": "One", "score": 90 },
+        { "name": "Two", "score": 96 }
+      ] 
+    },
+  ],
+};

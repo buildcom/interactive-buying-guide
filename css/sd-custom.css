@@ -1,0 +1,36 @@
+body{
+  background-color:#fff;
+}
+.choiceSet {
+  position: relative;
+  margin-top: 15px;
+  opacity: 1;
+}
+.choiceSet .thumbnail {
+  border: 1px #808080 solid;
+}
+.guidePadding {
+  padding: 20px 0px 60px 0px;
+}
+.guideCanvas {
+  position: relative;
+  border: 1px #333 solid;
+  border-radius: 4px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.controlPanel {
+  margin: 20px 0px 10px 0px;
+}
+ol.breadcrumb {
+  margin: 0px;
+}
+.breadcrumb,
+.categoryBtn,
+.stepCounter,
+.upSellPanel,
+.learningPanel,
+.controlPanel {
+  /*  opacity: 1;*/
+  display: none;
+}
