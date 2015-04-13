@@ -4,23 +4,20 @@
 
 	app.controller('GuideController', function(){
 		this.productSelection = options;
+
+		// console.log(options);
+
 	});
 
 	app.controller('nextSetController', ['$scope', function($scope) {
 	  
 	  $scope.getNextSet = function(o) {
-      
-	  	// console.log(o);
-	  	console.log(o.options);
-	  	// return o.options;
-
-      // console.log('Fired! Fired! Fired!');
-       //for (var c = 0; c < options.length; c++) {
-      	
-      	// 	console.log(options[id].options[c]);
-
-       //};
+	  	$scope.options.image = o.options;
+	  	$scope.options.title = o.options;
+	  	$scope.options.price = o.options;
+	  	$scope.options.description = o.options;
     };
+
 	}]);
 
 	var options = [
