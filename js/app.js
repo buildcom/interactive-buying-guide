@@ -1,128 +1,49 @@
 (function(){
 
-	var app = angular.module('productGuide',[]);
+	angular.module('productGuide',['ngRoute','ngAnimate'])
+	.config(['$routeProvider',
+    function($routeProvider) {
+      $routeProvider
+        .when('/item/:itemId', {
+          templateUrl: 'views/pdp.html',
+          controller: 'pdpCtrl'
+        })
+        .when('/?:choiceid', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      });
+  }])
+  .controller('MainCtrl', function($scope, $http, $routeParams) {
 
-	app.controller('GuideController', function(){
-		this.productSelection = options;
+  	console.log('hello');
+  	console.log($routeParams);
 
-		// console.log(options);
+  	$scope.params = $routeParams;
+  	$scope.productSelection = step.options;
+		$scope.prompt = step.question;
 
-	});
-
-	app.controller('nextSetController', ['$scope', function($scope) {
-	  
-	  $scope.getNextSet = function(o) {
-	  	$scope.options.image = o.options;
-	  	$scope.options.title = o.options;
-	  	$scope.options.price = o.options;
-	  	$scope.options.description = o.options;
+		$scope.getNextSet = function(o) {
+			console.log(o);
+			// $scope.productSelection = o.options;
+			// $scope.prompt = o.question;
+			
+	  	if ("step.options" in o) {
+	  		$scope.productSelection = o.options;
+	  	}
+	  	else {
+	  		console.log('Nothing to show!');
+	  	}
     };
 
-	}]);
+  })
+.controller('pdpCtrl', function($scope, $routeParams) {
+  // console.log('this');
+  $scope.params = $routeParams;
+  console.log($scope.params);
+});
 
-	var options = [
-		{
-			"id" : "1",
-			"image" : "images/01.jpg",
-			"title" : "Product 1",
-			"price" : "399.99",
-			"description" : "High Quality",
-			"url":"http://www.google.com/",
-			"options" : [
-				{
-					"id" : "1.1",
-					"image" : "images/02.jpg",
-					"title" : "Product 1.1",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "1.2",
-					"image" : "images/02.jpg",
-					"title" : "Product 1.2",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "1.3",
-					"image" : "images/02.jpg",
-					"title" : "Product 1.3",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				}
-			]
-		},
-		{
-			"id" : "2",
-			"image" : "images/01.jpg",
-			"title" : "Product 2",
-			"price" : "399.99",
-			"description" : "High Quality",
-			"url":"http://www.google.com/",
-			"options" : [
-				{
-					"id" : "2.1",
-					"image" : "images/02.jpg",
-					"title" : "Product 2.1",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "2.2",
-					"image" : "images/02.jpg",
-					"title" : "Product 2.2",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "2.3",
-					"image" : "images/02.jpg",
-					"title" : "Product 2.3",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				}
-			]
-		},
-		{
-			"id" : "3",
-			"image" : "images/01.jpg",
-			"title" : "Product 3",
-			"price" : "399.99",
-			"description" : "High Quality",
-			"url":"http://www.google.com/",
-			"options" : [
-				{
-					"id" : "3.1",
-					"image" : "images/02.jpg",
-					"title" : "Product 3.1",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "3.2",
-					"image" : "images/02.jpg",
-					"title" : "Product 3.2",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				},
-				{
-					"id" : "3.3",
-					"image" : "images/02.jpg",
-					"title" : "Product 3.3",
-					"price" : "399.99",
-					"description" : "High Quality",
-					"url":"http://www.google.com/"
-				}
-			]
-		}
-	];
+var step = {
+  
+};
 
 })();
