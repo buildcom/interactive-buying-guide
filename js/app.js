@@ -8,7 +8,7 @@
           templateUrl: 'views/pdp.html',
           controller: 'pdpCtrl'
         })
-        .when('/:n0?/:n1?/:n2?/:n3?/:n4?/:n5?/:n6?/:n7?/:n8?/:n9/', {
+        .when('/:n0?/:n1?/:n2?/:n3?/:n4?/:n5?/:n6?/:n7?/:n8?/:n9?/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       });
@@ -23,7 +23,11 @@
     $scope.productSelection = step.options;
     $scope.prompt = step.question;
 
-    console.log(Object.keys($scope.params).length);
+    n = Object.keys($scope.params).length;
+
+    console.log($scope.params[('n'+(n-1))]);
+
+
 
     $scope.getNextSet = function(o) {
       console.log(o);
@@ -43,8 +47,7 @@
   // console.log('this');
   $scope.params = $routeParams;
 
-  console.log(_.size($scope.params.Data));
-  console.log($scope.params.lengthS);
+
 });
 
 var step = {
