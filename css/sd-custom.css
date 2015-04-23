@@ -1,36 +1,22 @@
-body{
-  background-color:#fff;
+#ibg .choiceSet {
+
 }
-.choiceSet {
-  position: relative;
-  margin-top: 15px;
-  opacity: 1;
+#ibg h2 {
+  margin: 0px 0px 15px 0px;
+  padding: 0;
 }
-.choiceSet .thumbnail {
-  border: 1px #808080 solid;
-}
-.guidePadding {
-  /*padding: 20px 0px 60px 0px;*/
-}
-.guideCanvas {
-  position: relative;
-  border: 1px #333 solid;
-  border-radius: 4px;
-  background-color: #ccc;
-  overflow: hidden;
-}
-.controlPanel {
-  margin: 20px 0px 10px 0px;
-}
-ol.breadcrumb {
+#ibg .choiceSet h3 {
+  padding: 15px 0px 15px 0px;
   margin: 0px;
 }
-.breadcrumb,
-.categoryBtn,
-.stepCounter,
-.upSellPanel,
-.learningPanel,
-.controlPanel {
-  opacity: 1;
-  display: none;
+#ibg .choiceSet .thumbnail {
+  border: 1px #ccc solid;
+  padding: 0px;
+  margin-bottom: 15px;
+}
+#ibg .choiceSet .thumbnail:hover * {
+  text-decoration: none;
+}
+#ibg .choiceSet .caption {
+  padding: 0px 10px 10px 10px;
 }
