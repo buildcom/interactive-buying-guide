@@ -28,8 +28,6 @@
 
     console.log($scope.params[('n'+(n-1))]);
 
-
-
     $scope.getNextSet = function(o) {
       console.log(o);
       // $scope.productSelection = o.options;
@@ -46,8 +44,17 @@
   })
 .controller('pdpCtrl', function($scope, $routeParams) {
   // console.log('this');
-  $scope.params = $routeParams;
+  console.log('hello');
+    console.log($routeParams);
 
+    $scope.params = $routeParams;
+    // $scope.productSelection = step.options;
+    $scope.productSelection = [{"title":"Large Room"},{"title":"Medium Room"},{"title":"Small Room"}];
+    $scope.prompt = step.question;
+
+    n = Object.keys($scope.params).length;
+
+    console.log($scope.params[('n'+(n-1))]);
 
 });
 
