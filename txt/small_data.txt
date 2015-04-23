@@ -1,0 +1,30 @@
+question :  What size space are you cooling?
+	answer :  Small Space - 400 sq ft or less
+		question :  Would you like a heat function?
+			answer :  Cool Only
+				LT0815CER
+				US08D10B
+				WS08D10
+			answer :  Cool and Heat
+				WTC8001W
+				FFTH0822R1
+				UE08D11C
+	answer :  Medium Space - Up to 1000 sq ft or less 
+		question :  Would you like a heat function?
+			answer :  Cool only
+				LT1215CER
+				LT1033CNR
+				FFTA1233Q2
+			answer :  Cool and Heat
+				WTC12001W
+				FFTH1222R2
+				LT1035HNR
+			answer :  Large Space - 1000+ sq ft
+		question :  Would you like a heat function?
+			answer :  Cool Only
+				FRA144HT2
+				US14D30B
+				WS15D30
+			answer :  Cool and Heat
+				FFTH1422R2
+				WS16C30
