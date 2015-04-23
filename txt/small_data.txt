@@ -19,7 +19,7 @@ question :  What size space are you cooling?
 				WTC12001W
 				FFTH1222R2
 				LT1035HNR
-			answer :  Large Space - 1000+ sq ft
+	answer :  Large Space - 1000+ sq ft
 		question :  Would you like a heat function?
 			answer :  Cool Only
 				FRA144HT2
