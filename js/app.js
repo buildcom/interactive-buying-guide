@@ -27,8 +27,6 @@
 
     console.log($scope.params[('n'+(n-1))]);
 
-
-
     $scope.getNextSet = function(o) {
       console.log(o);
       // $scope.productSelection = o.options;
@@ -46,7 +44,6 @@
 .controller('pdpCtrl', function($scope, $routeParams) {
   // console.log('this');
   $scope.params = $routeParams;
-
 
 });
 
