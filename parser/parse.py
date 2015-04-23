@@ -55,8 +55,16 @@ def create_tree(lst, level = 0, previous_node = None):
     # nn = next node
     result = {}
     for i in range(len(lst)):
+        print('________________________________________________________________________________')
+
+        
+
         # print(lst[i])
         cn = lst[i]
+
+        if cn['name'] == 'answer':
+            print('\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n')
+            print(cn)
 
         # print(cn['level'])
         try:
