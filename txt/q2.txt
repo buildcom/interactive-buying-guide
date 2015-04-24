@@ -1,0 +1,32 @@
+question :  How humid is your space?
+	answer :  Moderately Damp - smell musty in humid weather  
+		question :  What size space are you looking to dehumidify?
+			answer :  Small space - under 400 sq ft
+				DEP301EW
+				DDR30A2GP
+				FAD301NWD
+			answer :  Medium Space - Up to 1000 sq ft
+				DEP501EW
+				DDR50A2GP
+				DDR45A3GP
+			answer :  Large space - 1000 sq ft +
+				DEP701EW
+				DDR60A2GP
+				DDR70A2GP
+	answer :  Damp - consistently smell musty 
+		question :  What size space are you looking to dehumidify?
+			answer :  Small - Medium Space - Up to 1000 sq ft
+				DEP501EW
+				DDR50A2GP
+				DDR45A3GP
+			Large space - 1000 sq ft +
+				DEP701EW
+				DDR60A2GP
+				DDR70A2GP
+	answer :  Very Damp - Consistently musty and may have mold or moisture spots in areas
+		DEP701EW
+		DDR60A2GP
+		DDR70A2GP
+
+
+

@@ -1,0 +1,113 @@
+question :  Do you have the ability to permanently install or are you looking for an easy/less permanent cooling solution?
+	answer :  Permanent installation
+		question :  Are you looking to install your cooling solution on your wall or in your window?
+			answer :  Wall
+				question :  Do you want a through the wall air conditioner or a single or multi-zone remote split cooling system?
+					answer :  Through the wall AC  
+					question :  What size space are you cooling?
+						answer :  Small Space - 400 sq ft or less
+							question :  Would you like a heat function?
+								answer :  Cool Only
+									LT0815CER
+									US08D10B
+									WS08D10
+								answer :  Cool and Heat
+									WTC8001W
+									FFTH0822R1
+									UE08D11C
+						answer :  Medium Space - Up to 1000 sq ft or less 
+							question :  Would you like a heat function?
+								answer :  Cool only
+									LT1215CER
+									LT1033CNR
+									FFTA1233Q2
+								answer :  Cool and Heat
+									WTC12001W
+									FFTH1222R2
+									LT1035HNR
+						answer :  Large Space - 1000+ sq ft
+							question :  Would you like a heat function?
+								answer :  Cool Only
+									FRA144HT2
+									US14D30B
+									WS15D30
+								answer :  Cool and Heat
+									FFTH1422R2
+									WS16C30
+					answer :  Multi Zone Split AC  
+						question :  How  many areas/zones are you looking to cool?
+							answer :  Single Zone
+								question :  Would you like a heat function?
+									answer :  Cool Only
+										M24CJ
+										M18CJ
+										M12CJ
+									answer :  Cool and Heat
+										LS240HSV3
+										LS307HV3
+										BR1224W3A
+							answer :  Dual Zone
+								PMD243HDX
+								MR36MW18X2
+								SENA18HFIX2
+							answer :  Triple Zone
+								PMD303HTX
+								MR36MW12X3
+								SENA09HFIX3
+			answer :  Window  
+				question :  What size space are you looking to cool?
+					answer :  Small Space 400 sq ft or less  
+						question :  Would you like a heat function included?
+							answer :  Cool Only
+								LW8015ER
+								CP08G10A
+								FFRE0833Q1
+							answer :  Cool and Heat
+								WAC8001W
+								LW8015HR
+								FFRH0822R1
+					A. Medium Space - 400 - 1000 sq ft  
+						question :  Would you like a heat function included?
+							answer :  Cool Only
+								LW1215ER
+								LW1015ER
+								CP12G10A
+							answer :  Cool and Heat
+								WAC12001W
+								LW1215HR
+								FFRH1222R2
+					answer :  Large Space - 1000+ sq ft 
+						question :  Would you like a heat function included?
+							answer :  Cool Only
+								EP18G33B
+								CP24G30A
+								LW1815ER
+							answer :  Cool and Heat
+								WAC18001W
+								FFRH2522R2
+								LW1815HR
+	answer :  Non-Permanent or Portable Installation 
+		question :  What size space are you looking to cool?
+			answer :  Medium Space - Up to 1000 sq ft 
+				question :  Would you like a heat function included?
+					answer :  Cool Only
+						AP12000S
+						PAC1201W
+						APAC120S
+					answer :  Cool and Heat
+						AP12000HS
+						DPA120HB1WDB
+			answer :  Small Space - under 400 sq ft
+				AP8000W
+				PAC801W
+				AP10002BL
+			answer :  Large Space - 1000+ sq ft 
+				question :  Would you like a heat function included?
+					answer :  Cool Only
+						AP14003W
+						PAC1401W
+						APAC140C
+					answer :  Cool and Heat
+						AP14001HS
+						APAC140HC
+						P14B
