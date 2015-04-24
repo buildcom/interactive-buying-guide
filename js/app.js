@@ -15,16 +15,18 @@
             $scope.itemSelection = [];
             $scope.items = false;
 
+
+            // traverses the json tree
             $scope.getNextSet = function(o, index) {
+                // if no items, there are more questions to be asked
                 if (o.products.length == 0) {
                     $scope.items = false;
                     $location.path($location.path() + (index +1)+ '/');
-                } else {
+                }
+                else {
 
                     $scope.items = true;
-
                     $location.path($location.path() + (index +1)+ '?items=true');
-
                     $scope.itemSelection = o.products;
                 }
             };
@@ -148,14 +150,14 @@
 
             n_params = Object.keys($scope.params).length;
 
+            // this means navigate tree
             if (n_params) {
                 results = results.question;
 
                 for (var i = 1; i < n_params + 1; ++i) {
                     if( i == n_params) {
-
                         var pars = $scope.params['n'+(n_params-1)].split("?");
-
+                        // 3?item = true on the last variable to look at items
                         if(pars.length > 1) {
                             $scope.items = true;
                             tmp_index = 'n' + (n_params-1);
@@ -166,16 +168,17 @@
                             $scope.items = false;
                         }
                     }
+                    // last variable not
                     else {
                         results = results.options[$scope.params[('n' + (i - 1))] - 1].step.question;
                         $scope.items = false;
                     }       
                 }
+                // reset variables
                 if (!$scope.items) {
                     $scope.question = results.text;
                     $scope.productSelection = results.options;    
                 }
             }
         });
-
 })();
