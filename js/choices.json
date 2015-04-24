@@ -4,13 +4,13 @@
             {
                 "products": [],
                 "answer": {},
-                "step": {'question': {'text': '', 'options': []}}
+                "step": {"question": {"text": "", "options": []}},
                 "text": "Cool my space"
             },
             {
                 "products": [],
                 "answer": {},
-                "step": {'question': {'text': '', 'options': []}}
+                "step": {"question": {"text": "", "options": []}},
                 "text": "Get rid of excess moisture"
             },
             {
@@ -36,7 +36,7 @@
                                                     "FAD301NWD"
                                                 ],
                                                 "answer": {},
-                                                "step": {'question': {'text': '', 'options': []}}
+                                                "step": {"question": {"text": "", "options": []}},
                                                 "text": "Small space - under 400 sq ft"
                                             },
                                             {
@@ -46,7 +46,7 @@
                                                     "DDR45A3GP"
                                                 ],
                                                 "answer": {},
-                                                "step": {'question': {'text': '', 'options': []}}
+                                                "step": {"question": {"text": "", "options": []}},
                                                 "text": "Medium Space - Up to 1000 sq ft"
                                             },
                                             {
@@ -56,7 +56,7 @@
                                                     "DDR70A2GP"
                                                 ],
                                                 "answer": {},
-                                                "step": {'question': {'text': '', 'options': []}}
+                                                "step": {"question": {"text": "", "options": []}},
                                                 "text": "Large space - 1000 sq ft +"
                                             }
                                         ]
@@ -66,13 +66,13 @@
                             {
                                 "products": [],
                                 "answer": {},
-                                "step": {'question': {'text': '', 'options': []}}
+                                "step": {"question": {"text": "", "options": []}},
                                 "text": "Damp - consistently smell musty"
                             },
                             {
                                 "products": [],
                                 "answer": {},
-                                "step": {'question': {'text': '', 'options': []}}
+                                "step": {"question": {"text": "", "options": []}},
                                 "text": "Very Damp - Consistently musty and may have mold or moisture spots in areas"
                             }
                         ]
@@ -83,5 +83,3 @@
         "text": "Are you looking to cool your space or get rid of excess moisture?"
     }
 }
-
-{'question': {'text': '', 'options': []}}
