@@ -41,14 +41,6 @@ def dict_insert_or_append(adict,key,val):
     else:
         adict[key] = val
 
-content = ''
-with open('../txt/small_data.txt') as f:
-    content = f.read()
-
-print('--------------------------------------------')
-normalized_data = normalize_data(content)
-pprint(normalized_data)
-print('--------------------------------------------')
 
 def create_tree(lst, level = 0, previous_node = None):
     # cn = current node
@@ -115,6 +107,127 @@ def create_tree(lst, level = 0, previous_node = None):
 
     return result
 
+# returns array of lowest number of indents
+def highest_level(lst):
+    highest_val = -1
+    for item in lst:
+        if item['level'] > highest_val:
+            highest_val = item['level']
+    return highest_val
 
-json = create_tree(normalized_data)
-pprint(json)
+# returns array of lowest number of indents
+def lowest_level(lst):
+    lowest_val = 1000
+
+    for item in lst:
+        if item['level'] < lowest_val:
+            lowest_val = item['level']
+    return lowest_val
+
+# returns array of lowest items, array of lowest item indexes
+def lowest_items(lst):
+    lowest = lowest_level(lst)
+    lowest_items = [item for item in lst if item['level'] == lowest]
+    lowest_items_index = [s for s in range(len(lst)) if lst[s]['level']==lowest]
+    return lowest_items, lowest_items_index
+
+def remove_used_items(lst, indexes):
+    for n in range(len(indexes)):
+        lst[n]['level'] = 1001 + lst[n]['level']
+    return lst
+
+def prep_results(data, results={}):
+    lowest = lowest_level(data)
+    highest = highest_level(data)
+
+    lowest_lst, lowest_lst_index = lowest_items(data)
+    # print(lowest_lst, lowest_lst_index)
+
+    # if len(lowest_lst) == 1:
+    print('-----------------------------------------------\n'+ \
+        '-----------------------------------------------\nprepping results\n')
+    q = {}
+    q['question'] = lowest_lst[0]['value']
+    q['options'] = []
+    results['question'] = q
+
+    data = remove_used_items(data, lowest_lst_index)
+    # pprint(data)
+    # print('------\nstarting results:')
+    # print(results)
+    # create_results(data, results)
+    return data, results
+
+def create_results(data, results = {}):
+
+    lowest_lst, lowest_lst_index = lowest_items(data)
+
+
+    if lowest_lst[0]['name'] == 'question':
+        print('-----------------------------------------------\nquestion zone')
+        # if len(low)
+        for ques in lowest_lst:    
+            q = {}
+            q['question'] = lowest_lst[0]['value']
+            q['options'] = []
+            print(q)
+
+    elif lowest_lst[0]['name'] == 'answer':
+        print('-----------------------------------------------\nanswer zone')
+        for ans in lowest_lst:
+            a = {}
+            a['answer'] = {}
+            a['text'] = ans['value']
+            a['step'] = {}
+            a['products'] = []
+            print(a)
+    else:
+        print('-----------------------------------------------\nproduct zone')
+        for prod in lowest_lst:
+            p = {}
+            p['img'] = ''
+            p['description'] = ''
+            p['sku'] = prod['name']
+            p['link'] = ''
+            print(p)
+
+    print('-----------------------------------------------\nend')
+    print(results)
+
+    return results
+
+
+
+    # print(data)
+    # print('--')
+    # data = remove_used_items(data, lowest_lst_index)
+    # pprint(data)
+
+
+
+    # for item in lowest_lst:
+    #     print(item)
+
+
+content = ''
+with open('../txt/q2.txt') as f:
+    content = f.read()
+
+print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+normalized_data = normalize_data(content)
+print(highest_level(normalized_data))
+# pprint(normalized_data)
+# print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+
+prep_data, prep_results = prep_results(normalized_data)
+
+print('prep data:')
+print(prep_data)
+print('\nprep results:')
+print(prep_results)
+
+print('\n----------------------------------------------\n'+ \
+    '----------------------------------------------\ncreating results:')
+
+
+create_results(prep_data, prep_results)
