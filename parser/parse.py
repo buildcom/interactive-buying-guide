@@ -210,7 +210,7 @@ def create_results(data, results = {}):
 
 
 content = ''
-with open('../txt/q2.txt') as f:
+with open('../txt/q3.txt') as f:
     content = f.read()
 
 print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
@@ -222,7 +222,7 @@ print(highest_level(normalized_data))
 prep_data, prep_results = prep_results(normalized_data)
 
 print('prep data:')
-print(prep_data)
+pprint(prep_data)
 print('\nprep results:')
 print(prep_results)
 
@@ -230,4 +230,4 @@ print('\n----------------------------------------------\n'+ \
     '----------------------------------------------\ncreating results:')
 
 
-create_results(prep_data, prep_results)
+pprint(create_results(prep_data, prep_results))
