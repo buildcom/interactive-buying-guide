@@ -45,13 +45,13 @@ angular.module('productGuide', ['ngRoute', 'ngAnimate'])
 
       $scope.getProductData = function(product) {
         var sku = product.sku;
-        var url = "/on/demandware.store/Sites-Appliance-Site/default/External-JSONProductCard";
+        var url = "/on/demandware.store/Sites-Appliance-Site/default/External-JSONProductCard?productID=";
 
-        $http.get(url + "?ProductID="+ sku)
+        $http.get(url + sku)
         .then(function(data) {
-          product.link = data.productInfo.productPageURL;
-          product.name = data.productInfo.name;
-          product.img = data.productInfo.mainImageURL;
+          product.link = data.data.productInfo.productPageURL;
+          product.name = data.data.productInfo.name;
+          product.img  = data.data.productInfo.mainImageURL;
         });
       };
 
