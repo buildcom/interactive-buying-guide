@@ -45,14 +45,18 @@ angular.module('productGuide', ['ngRoute', 'ngAnimate'])
 
       $scope.getProductData = function(product) {
         var sku = product.sku;
-        $http.get('${URLUtils.url("Include-ProductCard")}' + "?ProductID="+ sku)
+        var url = "/on/demandware.store/Sites-Appliance-Site/default/Include-ProductCard";
+
+        console.log('${URLUtils.url("Include-ProductCard")}');
+
+        $http.get(url + "?ProductID="+ sku)
         .then(function(data, status, headers, config) {
           console.log(data);
           product.link = "";
           product.name = "";
           product.price = "";
         });
-      }
+      };
 
       $scope.params = $routeParams;
 
