@@ -1,40 +1,42 @@
-<div class="row" ng-hide="items">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h2>{{question}}</h2>
-	</div>
-</div>
-<div class="row" ng-hide="items">
-	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 choiceSet" ng-class="{'col-md-offset-2 col-lg-offset-2':{{$first&&productSelection.length==2}}}" ng-repeat="o in productSelection">
-		<a ng-click="getNextSet(o, $index)">
-			<div class="thumbnail">
-				<img src="http://fillmurray.com/g/800/480" alt="" class="hidden-xs">
-				<div class="caption text-center">
-					<h3>{{o.text}}<br>
-						<small> Square Footage </small>
-					</h3>
-					<a class="btn btn-success btn-block choiceBtn" role="button" ng-click="getNextSet(o, $index)"> Select </a>
-				</div>
+<div class="panel panel-default ng-scope" ng-hide="items">
+	<div class="panel-heading">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h2 class="ld-noUnderline"> {{question}} </h2>
+			<div ng-hide="first" ng-click="goBack()" class="btn ld-btn-defaultCta backBtn pull-right">
+				<i class="fa fa-chevron-left"></i> Go Back
 			</div>
-		</a>
+		</div>
 	</div>
-</div>
-<div class="row" ng-show="items">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h2> These are the best products for you. </h2>
-	</div>
-</div>
-<div class="row" ng-show="items">
-	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 choiceSet" ng-repeat="item in itemSelection">
-		<a href="#">
-			<div class="thumbnail">
-				<img src="http://fillmurray.com/g/800/480" alt="" class="hidden-xs">
-				<div class="caption text-center">
-					<h3>{{item.sku}}<br>
-						<small> Item Description </small>
-					</h3>
-					<a class="btn btn-success choiceBtn" role="button" href=""> Add to Cart </a> <a class="btn btn-default choiceBtn" role="button" href=""> View Page </a>
+	<div class="panel-body">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 choiceSet" ng-class="{'col-md-offset-2 col-lg-offset-2':{{$first&&productSelection.length==2}}}" ng-repeat="o in productSelection">
+			<a ng-click="getNextSet(o, $index)">
+				<div class="thumbnail">
+					<img class="hidden-xs" src="{{o.img}}">
+					<div class="caption text-center">
+						<div class="btn btn-lg btn-block ld-btn-primaryCta choiceBtn" ng-click="getNextSet(o, $index)"> {{o.text | limitTo: 30 }} {{ o.text.length > 30 ? "..." : ""}} </div>
+					</div>
 				</div>
-			</div>
-		</a>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default ng-scope" ng-show="items">
+	<div class="panel-heading">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h2 class="ld-noUnderline"> Based upon your selection, we have found these products for you: </h2>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 choiceSet ng-scope" ng-class="{'col-md-offset-2 col-lg-offset-2':{{$first&&productSelection.length==2}}}" ng-repeat="item in itemSelection">
+			<a href="{{item.link}}">
+				<div class="thumbnail">
+					<img class="hidden-xs" src="{{item.img}}">
+					<div class="caption text-center">
+						<div class="btn btn-lg btn-block ld-btn-primaryCta choiceBtn"> {{item.name | limitTo: 30 }} {{ item.name.length > 30 ? "..." : ""}} </div>
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
 </div>
