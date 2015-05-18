@@ -48,10 +48,10 @@ angular.module('productGuide', ['ngRoute', 'ngAnimate'])
         var url = "/on/demandware.store/Sites-Appliance-Site/default/External-JSONProductCard";
 
         $http.get(url + "?ProductID="+ sku)
-        .then(function(data, status, headers, config) {
-          console.log(data);
-          product.link = data.link;
-          product.name = data.name;
+        .then(function(data) {
+          product.link = data.productInfo.productPageURL;
+          product.name = data.productInfo.name;
+          product.img = data.productInfo.mainImageURL;
         });
       };
 
